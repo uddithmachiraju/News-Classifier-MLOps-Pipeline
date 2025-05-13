@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# PyCharm / VSCode settings
+.idea/
+.vscode/
+
+# Output files
+*.log
+*.out
+*.DS_Store
+
+# Python cache
+*.pyo
+*.pyd
+*.pdb
+
+# CSVs, raw or processed data
+data/raw/
+data/processed/
+data/interim/
+data/external/
+
+# Model binaries / checkpoints
+models/
+*.h5
+*.pt
+*.pkl
+*.joblib
+
+# AWS credentials or sensitive keys
+*.pem
+*.key
+*.env
+.env*
+
+# Docker
+**/__pycache__/
+**/*.pyc
+docker-compose.override.yml
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# MacOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Terraform state (if using Terraform)
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Jenkins
+jenkins_home/
