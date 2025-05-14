@@ -1,1 +1,1 @@
-A serverless machine learning system that classifies news articles by topic.
+Building an end-to-end machine learning news pipeline using Python, Docker, Jenkins, AWS Lambda, and Kubernetes(optional). This system fetches AI-related articles daily, stores them in a SQLite database, preprocesses and vectorizes the text and trains a summarizer and serves model predictions through a Flask API. The entire workflow is containerized and CI/CD-enabled for automated deployment and scaling.

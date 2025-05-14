@@ -1,7 +1,7 @@
 import os
 import requests 
-import pandas as pd 
-from src.config import raw_data
+from src.injection.db_manager import create_news_table, insert_article
+from src.config.settings import raw_data
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,21 +19,10 @@ def fetch_news(query = "ai", page_size = 100, pages = 1, output_path = raw_data)
             print(f"Error fetching page {page}: {data.get('message')}")
             break 
 
-        articles += data["articles"]
-
-    df = pd.DataFrame(
-        [
-            {
-                "title": a["title"],
-                "description": a["description"],
-                "content": a["content"],
-                "source": a["source"]["name"]
-            }
-            for a in articles
-        ]
-    )
-    df.to_csv(output_path, index = False) 
-    print(f"saved {len(df)} articles to {output_path}") 
+        for article in data["articles"]:
+            create_news_table() 
+            articles.append(article)
+            insert_article(article) 
 
 if __name__ == "__main__":
     fetch_news() 

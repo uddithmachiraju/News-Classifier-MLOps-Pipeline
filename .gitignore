@@ -27,6 +27,7 @@ ENV/
 *.pdb
 
 # CSVs, raw or processed data
+data/
 data/raw/
 data/processed/
 data/interim/
@@ -69,3 +70,6 @@ logs/
 
 # Jenkins
 jenkins_home/
+
+# extra
+to-do.txt
