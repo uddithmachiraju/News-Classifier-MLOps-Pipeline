@@ -1,6 +1,10 @@
 import sqlite3
 from src.config.settings import db_path 
+from src.utils.logger import get_logger
 
+logger = get_logger("database") 
+
+logger.info("Initilized the database connection")
 def connect_db():
     return sqlite3.connect(db_path) 
 
